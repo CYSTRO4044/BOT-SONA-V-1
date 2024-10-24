@@ -15,7 +15,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Goat Bot Command": {
+	"Sona Bot Command": {
 		"scope": "javascript,typescript",
 		"prefix": "GoatBotCommandCreate",
 		"body": [

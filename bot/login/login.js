@@ -1,5 +1,5 @@
 // set bash title
-process.stdout.write("\x1b]2;Goat Bot V2 - Made by NTKhang\x1b\x5c");
+process.stdout.write("\x1b]2;slSona Bot V1 - Made by Cystro \x1b\x5c");
 const defaultRequire = require;
 
 function decode(text) {
@@ -63,24 +63,25 @@ function centerText(text, length) {
 }
 
 // logo
+// logo
 const titles = [
 	[
-		"██████╗  ██████╗  █████╗ ████████╗    ██╗   ██╗██████╗",
-		"██╔════╝ ██╔═══██╗██╔══██╗╚══██╔══╝    ██║   ██║╚════██╗",
-		"██║  ███╗██║   ██║███████║   ██║       ██║   ██║ █████╔╝",
-		"██║   ██║██║   ██║██╔══██║   ██║       ╚██╗ ██╔╝██╔═══╝",
-		"╚██████╔╝╚██████╔╝██║  ██║   ██║        ╚████╔╝ ███████╗",
-		"╚═════╝  ╚═════╝ ╚═╝  ╚═╝   ╚═╝         ╚═══╝  ╚══════╝"
+		"░██████╗░█████╗░███╗░░██╗░█████╗░  ██╗░░░██╗░░███╗░░", 
+		"██╔════╝██╔══██╗████╗░██║██╔══██╗  ██║░░░██║░████║░░", 
+		"╚█████╗░██║░░██║██╔██╗██║███████║  ╚██╗░██╔╝██╔██║░░",
+		"░╚═══██╗██║░░██║██║╚████║██╔══██║  ░╚████╔╝░╚═╝██║░░",
+		"██████╔╝╚█████╔╝██║░╚███║██║░░██║  ░░╚██╔╝░░███████╗",
+		"╚═════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝  ░░░╚═╝░░░╚══════╝"
 	],
 	[
-		"█▀▀ █▀█ ▄▀█ ▀█▀  █▄▄ █▀█ ▀█▀  █░█ ▀█",
-		"█▄█ █▄█ █▀█ ░█░  █▄█ █▄█ ░█░  ▀▄▀ █▄"
+		"█▀ █▀█ █▄░█ ▄▀█   █▄▄ █▀█ ▀█▀   █░█ ▄█",
+		"▄█ █▄█ █░▀█ █▀█   █▄█ █▄█ ░█░   ▀▄▀ ░█"
 	],
 	[
-		"G O A T B O T  V 2 @" + currentVersion
+		"S O N A B O T  V 1 @" + currentVersion
 	],
 	[
-		"GOATBOT V2"
+		"SONA BOT V1"
 	]
 ];
 const maxWidth = process.stdout.columns;
@@ -98,7 +99,7 @@ for (const text of title) {
 	const textColor = gradient("#FA8BFF", "#2BD2FF", "#2BFF88")(text);
 	centerText(textColor, text.length);
 }
-let subTitle = `GoatBot V2@${currentVersion}- A simple Bot chat messenger use personal account`;
+let subTitle = `Hello my love Cystro, how are you today ♡!? `;
 const subTitleArray = [];
 if (subTitle.length > maxWidth) {
 	while (subTitle.length > maxWidth) {
@@ -112,9 +113,9 @@ if (subTitle.length > maxWidth) {
 else {
 	subTitleArray.push(subTitle);
 }
-const author = ("Created by NTKhang with ♡");
-const srcUrl = ("Source code: https://github.com/ntkhang03/Goat-Bot-V2");
-const fakeRelease = ("ALL VERSIONS NOT RELEASED HERE ARE FAKE");
+const author = ("");
+const srcUrl = ("");
+const fakeRelease = ("");
 for (const t of subTitleArray) {
 	const textColor2 = gradient("#9F98E8", "#AFF6CF")(t);
 	centerText(textColor2, t.length);
@@ -624,7 +625,7 @@ function stopListening(keyListen) {
 // }
 
 async function startBot(loginWithEmail) {
-	console.log(colors.hex("#f5ab00")(createLine("START LOGGING IN", true)));
+	console.log(colors.hex("#f5ab00")(createLine("START SONA BOT BY CYSTRO ", true)));
 	const currentVersion = require("../../package.json").version;
 	const tooOldVersion = (await axios.get("https://raw.githubusercontent.com/ntkhang03/Goat-Bot-V2-Storage/main/tooOldVersions.txt")).data || "0.0.0";
 	// nếu version cũ hơn
@@ -644,7 +645,7 @@ async function startBot(loginWithEmail) {
 	appState = filterKeysAppState(appState);
 	writeFileSync(dirAccount, JSON.stringify(appState, null, 2));
 	setTimeout(() => changeFbStateByCode = false, 1000);
-	// ——————————————————— LOGIN ———————————————————— //
+	// ——————————————————— LOGIN SONA ———————————————————— //
 	(function loginBot(appState) {
 		global.GoatBot.commands = new Map();
 		global.GoatBot.eventCommands = new Map();
@@ -697,7 +698,7 @@ async function startBot(loginWithEmail) {
 				if (facebookAccount.email && facebookAccount.password) {
 					return startBot(true);
 				}
-				// —————————— CHECK DASHBOARD —————————— //
+				// —————————— Checking my Sona dashboard —————————— //
 				if (global.GoatBot.config.dashBoard?.enable == true) {
 					try {
 						await require("../../dashboard/app.js")(null);
@@ -725,7 +726,7 @@ async function startBot(loginWithEmail) {
 			log.info("PREFIX", global.GoatBot.config.prefix);
 			log.info("LANGUAGE", global.GoatBot.config.language);
 			log.info("BOT NICK NAME", global.GoatBot.config.nickNameBot || "GOAT BOT");
-			// ———————————————————— GBAN ————————————————————— //
+			// ———————————————————— GBAN SONA BOT ————————————————————— //
 			let dataGban;
 
 			try {
@@ -733,7 +734,7 @@ async function startBot(loginWithEmail) {
 				const item = await axios.get("https://raw.githubusercontent.com/ntkhang03/Goat-Bot-V2-Gban/master/gban.json");
 				dataGban = item.data;
 
-				// ————————————————— CHECK BOT ————————————————— //
+				// ————————————————— CHECK BOT SONA  ————————————————— //
 				const botID = api.getCurrentUserID();
 				if (dataGban.hasOwnProperty(botID)) {
 					if (!dataGban[botID].toDate) {
@@ -748,7 +749,7 @@ async function startBot(loginWithEmail) {
 						}
 					}
 				}
-				// ———————————————— CHECK ADMIN ———————————————— //
+				// ———————————————— CHECK ADMIN SONA ———————————————— //
 				for (const idad of global.GoatBot.config.adminBot) {
 					if (dataGban.hasOwnProperty(idad)) {
 						if (!dataGban[idad].toDate) {
@@ -797,13 +798,13 @@ async function startBot(loginWithEmail) {
 				log.err('GBAN', getText('login', 'youAreBanned'));
 				process.exit();
 			}
-			// ——————————————————— LOAD DATA ——————————————————— //
+			// ——————————————————— LOAD DATA SONA ——————————————————— //
 			const { threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, sequelize } = await require(process.env.NODE_ENV === 'development' ? "./loadData.dev.js" : "./loadData.js")(api, createLine);
-			// ————————————————— CUSTOM SCRIPTS ————————————————— //
+			// ————————————————— CUSTOM SCRIPTS SONA ————————————————— //
 			await require("../custom.js")({ api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getText });
-			// —————————————————— LOAD SCRIPTS —————————————————— //
+			// —————————————————— LOAD SCRIPTS SONA —————————————————— //
 			await require(process.env.NODE_ENV === 'development' ? "./loadScripts.dev.js" : "./loadScripts.js")(api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, createLine);
-			// ———————————— CHECK AUTO LOAD SCRIPTS ———————————— //
+			// ———————————— CHECK AUTO LOAD SCRIPTS SONA ———————————— //
 			if (global.GoatBot.config.autoLoadScripts?.enable == true) {
 				const ignoreCmds = global.GoatBot.config.autoLoadScripts.ignoreCmds?.replace(/[ ,]+/g, ' ').trim().split(' ') || [];
 				const ignoreEvents = global.GoatBot.config.autoLoadScripts.ignoreEvents?.replace(/[ ,]+/g, ' ').trim().split(' ') || [];
@@ -860,7 +861,7 @@ async function startBot(loginWithEmail) {
 					}
 				});
 			}
-			// ——————————————————— DASHBOARD ——————————————————— //
+			// ——————————————————— DASHBOARD SONA ——————————————————— //
 			if (global.GoatBot.config.dashBoard?.enable == true && dashBoardIsRunning == false) {
 				logColor('#f5ab00', createLine('DASHBOARD'));
 				try {
@@ -872,7 +873,7 @@ async function startBot(loginWithEmail) {
 					log.err("DASHBOARD", getText('login', 'openDashboardError'), err);
 				}
 			}
-			// ———————————————————— ADMIN BOT ———————————————————— //
+			// ———————————————————— ADMIN BOT SONA———————————————————— //
 			logColor('#f5ab00', character);
 			let i = 0;
 			const adminBot = global.GoatBot.config.adminBot
@@ -891,7 +892,7 @@ async function startBot(loginWithEmail) {
 			log.master("SUCCESS", getText('login', 'runBot'));
 			log.master("LOAD TIME", `${convertTime(Date.now() - global.GoatBot.startTime)}`);
 			logColor("#f5ab00", createLine("COPYRIGHT"));
-			// —————————————————— COPYRIGHT INFO —————————————————— //
+			// —————————————————— COPYRIGHT INFO SONA—————————————————— //
 			// console.log(`\x1b[1m\x1b[33mCOPYRIGHT:\x1b[0m\x1b[1m\x1b[37m \x1b[0m\x1b[1m\x1b[36mProject GoatBot v2 created by ntkhang03 (https://github.com/ntkhang03), please do not sell this source code or claim it as your own. Thank you!\x1b[0m`);
 			console.log(`\x1b[1m\x1b[33m${("COPYRIGHT:")}\x1b[0m\x1b[1m\x1b[37m \x1b[0m\x1b[1m\x1b[36m${("Project GoatBot v2 created by ntkhang03 (https://github.com/ntkhang03), please do not sell this source code or claim it as your own. Thank you!")}\x1b[0m`);
 			logColor("#f5ab00", character);
@@ -902,7 +903,7 @@ async function startBot(loginWithEmail) {
 			// ——————————————————————————————————————————————————— //
 			const { restartListenMqtt } = global.GoatBot.config;
 			let intervalCheckLiveCookieAndRelogin = false;
-			// —————————————————— CALLBACK LISTEN —————————————————— //
+			// —————————————————— CALLBACK LISTEN SONA—————————————————— //
 			async function callBackListen(error, event) {
 				if (error) {
 					global.responseUptimeCurrent = responseUptimeError;
@@ -1070,7 +1071,7 @@ async function startBot(loginWithEmail) {
 				else
 					return log.err('GBAN', getText('login', 'youAreBanned'));
 			}
-			// ————————————————— CREATE CALLBACK ————————————————— //
+			// ————————————————— CREATE CALLBACK SONA————————————————— //
 			function createCallBackListen(key) {
 				key = randomString(10) + (key || Date.now());
 				callbackListenTime[key] = callBackListen;
@@ -1078,7 +1079,7 @@ async function startBot(loginWithEmail) {
 					callbackListenTime[key](error, event);
 				};
 			}
-			// ———————————————————— START BOT ———————————————————— //
+			// ———————————————————— START BOT———————————————————— //
 			await stopListening();
 			global.GoatBot.Listening = api.listenMqtt(createCallBackListen());
 			global.GoatBot.callBackListen = callBackListen;
