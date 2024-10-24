@@ -9,7 +9,7 @@ module.exports = {
                 role: 0,
                 description: {
                         vi: "cảnh cáo thành viên trong nhóm, đủ 3 lần ban khỏi box",
-                        en: "تحذير الاعضاء و المجموعات إذا تم تحذبرهم ثلاث مرات يبلعو بان"
+                        en: "تحذير الاعضاء  و المجموعة وخلاص "
                 },
                 category: "ادمن",
                 guide: {
