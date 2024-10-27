@@ -5,9 +5,9 @@ const path = require("path");
 module.exports = {
   config: {
     name: "ابتايم",
-    aliases: ["upe"],
+    aliases: ["up"],
     version: "1.0",
-    author: "CYSTRO",
+    author: "CYSTRO", 
     role: 0,
     shortDescription: {
       en: "وقت التشغيل"
@@ -60,7 +60,7 @@ module.exports = {
       }
 
 
-      const message = `البوت يعمل منذ 🌝 \n${uptimeString}`;
+      const message = `سـونـا تـعـمـل مـنـذ 🐥 \n${uptimeString}`;
       const imageStream = fs.createReadStream(imagePath);
 
       await api.sendMessage({
