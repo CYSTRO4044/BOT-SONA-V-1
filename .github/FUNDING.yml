@@ -11,6 +11,6 @@ issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
 lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
 custom: [
-  "https://www.facebook.com/100004179274058",
-  "https://www.facebook.com/100085065303625",
+  "https://www.paypal.com/paypalme/ntkhang03",
+  "https://www.buymeacoffee.com/ntkhang03",
 ]
